@@ -1,0 +1,90 @@
+<div class="container">
+
+  <div class="row mb-2 mt-3">
+    <div class="col-sm-12 text-right">
+
+      <a href="" routerLink="/membership">
+        <button type="button" class="btn btn-info btn-rounded"><i class="mdi mdi-plus"></i>
+          멤버쉽
+        </button>
+      </a>
+
+
+    </div>
+  </div>
+
+
+
+  <h1 align="center" class="display-4" style="font-size: 2.5rem">모든 이들이 누리는 공간.</h1>
+
+  <div class="row mt-5">
+    <div class="col-12">
+      <div class="card widget-inline">
+        <div class="card-body p-0">
+          <div class="row no-gutters">
+            <div class="col-sm-6 col-xl-3">
+              <div class="card shadow-none m-0">
+                <div class="card-body text-center">
+                  <i class="dripicons-briefcase text-muted" style="font-size: 24px;"></i>
+                  <h3><span>18</span></h3>
+                  <p class="text-muted font-15 mb-0">개의 분야</p>
+                </div>
+              </div>
+            </div>
+
+            <div class="col-sm-6 col-xl-3">
+              <div class="card shadow-none m-0 border-left">
+                <div class="card-body text-center">
+                  <i class="dripicons-checklist text-muted" style="font-size: 24px;"></i>
+                  <h3><span>132</span></h3>
+                  <p class="text-muted font-15 mb-0">개의 강좌</p>
+                </div>
+              </div>
+            </div>
+
+            <div class="col-sm-6 col-xl-3">
+              <div class="card shadow-none m-0 border-left">
+                <div class="card-body text-center">
+                  <i class="dripicons-user-group text-muted" style="font-size: 24px;"></i>
+                  <h3><span>1074</span></h3>
+                  <p class="text-muted font-15 mb-0">명의 회원수</p>
+                </div>
+              </div>
+            </div>
+
+            <div class="col-sm-6 col-xl-3">
+              <div class="card shadow-none m-0 border-left">
+                <div class="card-body text-center">
+                  <i class="dripicons-graph-line text-muted" style="font-size: 24px;"></i>
+                  <h3><span>75%</span> <i class="mdi mdi-arrow-up text-success"></i></h3>
+                  <p class="text-muted font-15 mb-0">증가율</p>
+                </div>
+              </div>
+            </div>
+
+          </div> <!-- end row -->
+        </div>
+      </div> <!-- end card-box-->
+    </div> <!-- end col-->
+  </div>
+  <!-- end row-->
+  <div class="row mb-2 mt-5">
+    <div class="col-sm-4">
+      <button type="button" class="btn btn-danger btn-rounded mb-3" (click)="uploadCourse()"><i
+          class="mdi mdi-plus"></i> 내 강의 올리기</button>
+    </div>
+    <div class="col-sm-8">
+      <div class="text-sm-right">
+        <div class="btn-group mb-3 ml-1">
+          <button type="button" class="btn btn-light" (click)="setStatus('basic')">베이직</button>
+          <button type="button" class="btn btn-light" (click)="setStatus('standard')">스탠다드</button>
+          <button type="button" class="btn btn-light" (click)="setStatus('pri')">프리미엄</button>
+        </div>
+      </div>
+    </div><!-- end col-->
+  </div>
+  <!-- end row-->
+
+  <app-course></app-course>
+
+</div>

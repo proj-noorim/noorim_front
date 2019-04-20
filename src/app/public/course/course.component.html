@@ -1,0 +1,45 @@
+<div class="container">
+  <div class="row">
+    <div class="col-md-6 col-xl-3" *ngFor="let item of this.dataService.course; let i = index">
+      <!-- project card -->
+      <div class="card d-block">
+        <!-- project-thumbnail -->
+        <img *ngIf="this.dataService.status == 'basic'" class="card-img-top"
+          src="assets/images/basic/project-{{item.id}}.jpg" alt="project image cap">
+        <img *ngIf="this.dataService.status == 'standard'" class="card-img-top"
+          src="assets/images/standard/project-{{item.id}}.jpg" alt="project image cap">
+        <img *ngIf="this.dataService.status == 'pri'" class="card-img-top"
+          src="assets/images/pri/project-{{item.id}}.jpg" alt="project image cap">
+        <div class="card-img-overlay">
+          <div class="badge badge-secondary p-1">진행중</div>
+        </div>
+
+        <div class="card-body position-relative">
+          <!-- project title-->
+          <h4 class="mt-0">
+            <a href="apps-projects-details.html" class="text-title" routerLink="/course/{{item.id}}">{{item.title}}</a>
+          </h4>
+
+          <!-- project detail-->
+          <p class="mb-3">
+            <span class="pr-2 text-nowrap">
+              <i class="mdi mdi-format-list-bulleted-type"></i>
+              <b>{{item.process}}</b> 개의 과정
+            </span>
+            <span class="text-nowrap">
+              <i class="mdi mdi-comment-multiple-outline"></i>
+              <b>{{item.comment}}</b> 개의 댓글
+            </span>
+          </p>
+          <!-- project progress-->
+          <p class="mb-2 font-weight-bold">진행도 <span class="float-right">{{item.percent}}%</span></p>
+          <div class="progress progress-sm">
+            <div class="progress-bar" role="progressbar" [attr.aria-valuenow]="item.percent" aria-valuemin="0"
+              aria-valuemax="100" [style.width.px]="item.percent">
+            </div><!-- /.progress-bar -->
+          </div><!-- /.progress -->
+        </div> <!-- end card-body-->
+      </div> <!-- end card-->
+    </div> <!-- end col -->
+
+  </div> <!-- container -->
